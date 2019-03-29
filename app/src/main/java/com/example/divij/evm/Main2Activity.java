@@ -24,25 +24,27 @@ private TextView text1;
         Password=(EditText) findViewById (R.id.et2);
         btn1=(Button) findViewById (R.id.bt5);
         text1=(TextView) findViewById (R.id.txt2);
+        //text2= (TextView)findViewById(R.id.winner);
         btn1.setOnClickListener (new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //text1.setText("bjpwon!\n" );
                  vote(Name.getText().toString(),Password.getText ().toString ());
             }
         });
     }
 private void vote(String userName, String userPassword)
 {
+    Name.setVisibility(View.INVISIBLE);
+    Password.setVisibility(View.INVISIBLE);
+    btn1.setVisibility(View.INVISIBLE);
+    text1.setVisibility(View.VISIBLE);
     Intent intent=getIntent ();
-    int c=intent.getIntExtra(MainActivity.EXTRA_NUMBER,0);
-    int c1=intent.getIntExtra(MainActivity.EXTRA_NUMBER,0);
-    int c2=intent.getIntExtra(MainActivity.EXTRA_NUMBER,0);
+    int c=intent.getIntExtra("party1",0);
+    int c1=intent.getIntExtra("party2",0);
+    int c2=intent.getIntExtra("nota",0);
     if( (userName.equals("divij")) && (userPassword.equals("1234")))
     {
-        text1.setText("bjp won!\n"+c);
-        text1.setText("congress won!\n"+c1);
-        text1.setText("NOTA won!\n"+c2);
+        text1.setText("Vote count:\nParty 1:\t"+c+"\nParty 2:\t"+c1+"\nNOTA:\t"+c2);
     }
     else{
         Toast.makeText (getApplicationContext (),str,Toast.LENGTH_LONG).show ();

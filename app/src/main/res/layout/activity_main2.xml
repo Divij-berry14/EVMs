@@ -7,17 +7,23 @@
     tools:context=".Main2Activity">
 
 
-
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginTop="85dp"
-        android:layout_marginLeft="170dp"
         android:id="@+id/et1"
         android:hint="Username"
         android:inputType="text"
-        android:layout_centerHorizontal="true"
+
         android:ems="8"
         android:textStyle="bold"
         android:textColor="#212121"/>
@@ -25,13 +31,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginTop="35dp"
-        android:layout_marginLeft="170dp"
         android:layout_below="@id/et1"
         android:id="@+id/et2"
         android:hint="Password"
         android:inputType="numberPassword"
-        android:layout_centerHorizontal="true"
+
         android:ems="8"
         android:textStyle="bold"
         android:textColor="#212121"/>
@@ -40,22 +44,25 @@
         android:layout_height="wrap_content"
         android:id="@+id/bt5"
         android:layout_below="@id/et2"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="35dp"
         android:text="Show Results"
-        android:layout_centerHorizontal="true"
+
         android:ems="8"
         android:textColor="#212121"/>
+    </LinearLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/txt2"
         android:layout_below="@id/bt5"
-        android:text="Display"
+        android:text="Results will show here"
         android:textColor="#212121"
         android:textSize="25dp"
         android:layout_centerHorizontal="true"
         android:gravity="center"
-        android:layout_marginTop="35dp"/>
+        android:layout_marginTop="35dp"
+        android:visibility="invisible"/>
+</FrameLayout>
+
+
 
 </RelativeLayout>

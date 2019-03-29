@@ -6,42 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
+<LinearLayout
+    android:layout_width="500dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginStart="250dp"
+    >
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:text="BJP"
-        android:layout_marginTop="120dp"
-        android:layout_marginLeft="140dp"
-        android:padding="10dp"
-        android:id="@+id/bt1"/>
+        android:text="Vote"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="100dp"
+
+        android:id="@+id/bt1"
+        android:textColor="#FFFFFFFF"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonshape"
+
+        />
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/bt1"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="140dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="100dp"
         android:text="Congress"
-        android:id="@+id/bt2"/>
+        android:id="@+id/bt2"
+        android:textColor="#FFFFFFFF"
+        android:textSize="30sp"
+        android:background="@drawable/buttonshape"
+
+        />
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/bt2"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="140dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="100dp"
         android:text="NOTA"
-        android:id="@+id/bt3"/>
+        android:id="@+id/bt3"
+        android:textColor="#FFFFFFFF"
+        android:textSize="30sp"
+        android:background="@drawable/buttonshape"
+        />
+</LinearLayout>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/bt3"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="140dp"
-        android:text="RESULTS"
+        android:text="Show Results"
         android:id="@+id/bt4"/>
-
-
-
-
 </RelativeLayout>
